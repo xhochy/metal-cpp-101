@@ -2,7 +2,6 @@
 // This should only be defined once per executable.
 // See also https://developer.apple.com/metal/cpp/
 #define NS_PRIVATE_IMPLEMENTATION
-#define CA_PRIVATE_IMPLEMENTATION
 #define MTL_PRIVATE_IMPLEMENTATION
 
 // Foundation.hpp wraps Apple's Foundation framework (NSArray, NSString, etc.)
