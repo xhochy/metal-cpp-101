@@ -1,0 +1,16 @@
+[workspace]
+authors = ["Uwe L. Korn <uwe.korn@quantco.com>"]
+channels = ["conda-forge"]
+name = "metal-with-cpp"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+meson-configure = "meson setup build"
+meson-compile = "meson compile -C build"
+
+[dependencies]
+meson = ">=1.11.1,<2"
+cxx-compiler = ">=1.11.0,<2"
+c-compiler = ">=1.11.0,<2"
+ninja = ">=1.13.2,<2"
