@@ -19,7 +19,11 @@ wget https://developer.apple.com/metal/cpp/files/metal-cpp_26.zip
 unzip metal-cpp_26.zip
 ```
 
-In addition, you should have the latest macOS SDK installed (via Xcode).
+In addition, you should have the latest macOS SDK installed (via Xcode) and download the metal toolchain via:
+
+```
+xcodebuild -downloadComponent MetalToolchain
+```
 
 The remaining development setup is done using [pixi](https://prefix.dev/).
 If you use `direnv`, everthing will be setup on activation.
