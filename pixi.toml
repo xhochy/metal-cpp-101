@@ -2,7 +2,7 @@
 authors = ["Uwe L. Korn <uwe.korn@quantco.com>"]
 channels = ["conda-forge"]
 name = "metal-with-cpp"
-platforms = ["osx-arm64"]
+platforms = ["osx-arm64", "linux-aarch64", "linux-64"]
 version = "0.1.0"
 
 [tasks]
@@ -14,3 +14,13 @@ meson = ">=1.11.1,<2"
 cxx-compiler = ">=1.11.0,<2"
 c-compiler = ">=1.11.0,<2"
 ninja = ">=1.13.2,<2"
+
+[feature.lint.dependencies]
+lefthook = "*"
+clang-format = "*"
+[feature.lint.tasks]
+pre-commit-install = "lefthook install"
+lint = "lefthook run pre-commit --all-files"
+
+[environments]
+default = { features = ["lint"] }
